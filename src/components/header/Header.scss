@@ -1,0 +1,85 @@
+@import '../../global.scss';
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  color: $maincolor;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  transition: all 2s ease;
+
+  .header__wrapper {
+    height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__left {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .header__logo {
+        font-size: 30px;
+        font-weight: 750;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .header__contactInfo {
+        display: flex;
+        justify-content: center;
+
+        .header__contactInfoIcon {
+          display: flex;
+          place-items: center;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .header__right {
+
+      .header__hamburger {
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $maincolor;
+          transform-origin: left; // the pivot will be the left point
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $maincolor;
+    color: white;
+
+    .header__hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
