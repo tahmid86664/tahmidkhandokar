@@ -11,7 +11,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
     <div className={"header " + (menuOpen && "active")}>
       <div className="header__wrapper">
         <div className="header__left">
-          <a href="#intro" className="header__logo">DevTahmid.</a>
+          <a href="#intro" className="header__logo">Dev.Tahmid</a>
           <div className="header__contactInfo">
             <div className="header__contactInfoIcon">
               <PersonIcon />

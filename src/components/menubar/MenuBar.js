@@ -14,7 +14,7 @@ const MenuBar = ({ menuOpen, setMenuOpen }) => {
           <a href="#intro">Intro</a>
         </li>
         <li onClick={handleOpenMenu}>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">Projects</a>
         </li>
         <li onClick={handleOpenMenu}>
           <a href="#testimonials">Testimonials</a>
