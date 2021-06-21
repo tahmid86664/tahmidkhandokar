@@ -5,12 +5,57 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+
+  .MuiSvgIcon-root {
+    font-size: 80px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    
+  
+    &.works__leftSliderButton {
+      left: 100px;
+
+      &:hover {
+        animation: slideButton 1s infinite ease-out;
+  
+        @keyframes slideButton {
+          50% {
+            transform: translateX(-10px);
+          }
+          100% {
+            transform: translateX(10px);
+          }
+        }
+      }
+    }
+
+    &.works__rightSliderButton {
+      right: 100px;
+
+      &:hover {
+        animation: slideButton 1s infinite ease-out;
+  
+        @keyframes slideButton {
+          50% {
+            transform: translateX(10px);
+          }
+          100% {
+            transform: translateX(-10px);
+          }
+        }
+      }
+    }
+  }
 
   .works__slider {
     height: 400px;
     display: flex;
     position: absolute;
     left: 0;
+    transition: all 1.5s ease;
 
     .works__container {
       width: 100vw;
