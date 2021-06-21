@@ -1,3 +1,124 @@
+@import "../../global.scss";
+
 .works {
-  background-color: darkkhaki;
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .works__slider {
+    height: 400px;
+    display: flex;
+    position: absolute;
+    left: 0;
+
+    .works__container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .works__item {
+        width: 720px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .works__itemBackground {
+          position: absolute;
+          z-index: 1;
+          height: 100%;
+          width: 101%;
+        }
+
+        .works__left {
+          flex: 7;
+          height: 100%;
+          // background-color: yellow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          // background-color: lightblue;
+          padding: 0 10px;
+
+          .works__leftForground {
+            width: 100%;
+            height: 60%;
+            z-index: 2;
+          }
+        }
+
+        .works__right {
+          flex: 5;
+          height: 100%;
+          background-color: transparent;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          .works__rightInfoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 20px 30px;
+            
+            .works__rightIconContainer {
+              width: 50px;
+              height: 50px;
+              padding: 3px;
+              background-color: #f8c7d6;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 5px;
+  
+              img {
+                width: 80%;
+                height: 80%;
+              }
+            }
+  
+            h2 {
+              font-size: 23px;
+              font-weight: 500;
+            }
+            span {
+              font-size: 16px;
+              font-weight: 400;
+              text-align: right;
+              margin-bottom: 5px;
+            }
+  
+            .works__button {
+              width: 80px;
+              height: 30px;
+              font-size: 16px;
+              background-color: $maincolor;
+              color: white;
+              border: none;
+              border-radius: 10px;
+              opacity: 0.7;
+              transition: all 1s ease-out;
+              text-decoration: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+  
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+
+          
+        }
+      }
+    }
+  }
 }
