@@ -17,10 +17,10 @@ const MenuBar = ({ menuOpen, setMenuOpen }) => {
           <a href="#portfolio">Projects</a>
         </li>
         <li onClick={handleOpenMenu}>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#works">Works</a>
         </li>
         <li onClick={handleOpenMenu}>
-          <a href="#works">Works</a>
+          <a href="#testimonials">Testimonials</a>
         </li>
         <li onClick={handleOpenMenu}>
           <a href="#contact">Contact</a>
