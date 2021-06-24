@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .works {
-  background-color: crimson;
+  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,7 @@
   .MuiSvgIcon-root {
     font-size: 80px;
     position: absolute;
-    color: white;
+    color: gray;
     cursor: pointer;
     
   

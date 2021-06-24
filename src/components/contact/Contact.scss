@@ -1,3 +1,93 @@
+@import '../../global.scss';
+
 .contact {
-  background-color: burlywood;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .contact__container {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 70px;
+      margin-right: 100px;
+    }
+
+    .contact__separator {
+      width: 1px;
+      height: 80%;
+      background-color: #532dff;
+    }
+
+    .contact__formContainer {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      h2 {
+        padding: 0 10px;
+        font-size: 35px;
+        border-bottom: 1px solid #532dff;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        .contact__formInput, .contact__formInputArea {
+          width: 80%;
+          background-color: #ececec;
+          padding: 15px 0 15px 5px;
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: gray;
+          border: none;
+          border-left: 3px solid #532dff;
+          outline-width: 0;
+          transition: all 0.8s ease;
+
+          &::placeholder {
+            color:  #c7c7c7;
+          }
+
+          &:focus {
+            border-color: $maincolor;
+          }
+        }
+
+        .contact__formInputArea{
+          border-bottom: 1px solid #532dff;
+          resize: none;
+        }
+
+        .contact__formButton {
+          border: 1px solid $maincolor;
+          background-color: $maincolor;
+          border-radius: 10px;
+          padding: 10px 20px;
+          cursor: pointer;
+          margin-bottom: 15px;
+          font-size: 18px;
+          font-weight: 600;
+          color: white;
+          transition: all 1s ease;
+
+          &:hover {
+            background-color: white;
+            color: $maincolor;
+          }
+        }
+      }
+    }
+  }
 }

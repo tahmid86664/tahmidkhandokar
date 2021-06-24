@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .testimonials {
   background-color: white;
   display: flex;
@@ -22,6 +24,7 @@
       justify-content: center;
       width: 20%;
       height: 55%;
+      padding: 20px 0;
       margin-left: 100px;
       background-color: white;
       box-shadow: 0px 0px 15px -8px black;
@@ -31,17 +34,17 @@
         padding: 10px 0 5px 5px;
         margin-bottom: 20px;
         border: none;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid #532dff;
         outline-width: 0;
         transition: all 0.8s ease;
 
         &:focus {
-          border-color: gray;
+          border-color: $maincolor;
         }
       }
 
       .testimonials__formInputArea{
-        border: 1px solid lightgray;
+        border: 1px solid #532dff;
       }
 
       input[type="file"] {
@@ -49,7 +52,7 @@
       }
 
       .testimonials__formImgInput {
-        border: 1px solid lightgray;
+        border: 1px solid #532dff;
         border-radius: 10px;
         padding: 10px 15px;
         cursor: pointer;
@@ -60,14 +63,15 @@
         transition: all 1s ease;
 
         &:hover {
-          background-color: lightgray;
+          background-color: $maincolor;
+          color: white;
         }
       }
       
 
       .testimonials__formButton {
-        border: 1px solid lightgray;
-        background-color: gray;
+        border: 1px solid $maincolor;
+        background-color: $maincolor;
         border-radius: 10px;
         padding: 10px 20px;
         cursor: pointer;
@@ -78,16 +82,16 @@
         transition: all 1s ease;
 
         &:hover {
-          background-color: lightgray;
-          color: gray;
+          background-color: white;
+          color: $maincolor;
         }
       }
     }
 
     .testimonials__separator {
       width: 1px;
-      height: 60%;
-      background-color: #e6e6e6;
+      height: 70%;
+      background-color: #532dff;
     }
 
     .testimonials__container {
@@ -96,6 +100,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
   
       .testimonials__card {
         width: 250px;
@@ -106,7 +111,18 @@
         flex-direction: column;
         justify-content: space-around;
         padding: 20px;
-        margin-left: 30px;
+        transition: all 0.7s ease-out;
+        // margin-left: 30px;
+
+        &.featured {
+          width: 300px;
+          height: 65%;
+          margin: 0 30px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
   
         .testimonials__cardTop {
           display: flex;

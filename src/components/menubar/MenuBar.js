@@ -11,7 +11,7 @@ const MenuBar = ({ menuOpen, setMenuOpen }) => {
     <div className={'menuBar ' + (menuOpen && "active")}>
       <ul>
         <li onClick={handleOpenMenu}>
-          <a href="#intro">Intro</a>
+          <a href="#intro">Home</a>
         </li>
         <li onClick={handleOpenMenu}>
           <a href="#portfolio">Projects</a>
