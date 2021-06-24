@@ -30,8 +30,16 @@ const Testimonials = () => {
       <h1>Testimonials</h1>
       <div className="testimonials__outerContainer">
         <div className="testimonials__form">
-          Form will be here
+          <input className="testimonials__formInput" type="text" placeholder="Enter your name" />
+          <input className="testimonials__formInput" type="text" placeholder="Enter your title" />
+          <textarea className="testimonials__formInputArea" rows="7" placeholder="Write what you want say about me & my works..." />
+          <label className="testimonials__formImgInput">
+            <input type="file" /> 
+            Upload your image
+          </label>
+          <button className="testimonials__formButton" type="submit" >Post</button>
         </div>
+        <div className="testimonials__separator"></div>
         <div className="testimonials__container">
           {
             testimonials.map(testimonial => (
