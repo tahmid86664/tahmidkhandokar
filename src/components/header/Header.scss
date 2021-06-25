@@ -33,6 +33,10 @@
         display: flex;
         justify-content: center;
 
+        @include headerInfoDisplay {
+          display: none;
+        }
+
         .header__contactInfoIcon {
           display: flex;
           place-items: center;

@@ -1,1 +1,17 @@
 $maincolor: #15023a;
+
+$headerInfoDisplayWidth: 750px;
+
+$width: 949px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content
+  }
+}
+
+@mixin headerInfoDisplay {
+  @media (max-width: #{$headerInfoDisplayWidth}) {
+    @content
+  }
+}

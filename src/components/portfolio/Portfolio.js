@@ -25,7 +25,7 @@ const Portfolio = () => {
     },
     {
       id: "desktopApp",
-      title: "Desktop App"
+      title: "Desktop Software"
     }
   ]
 
