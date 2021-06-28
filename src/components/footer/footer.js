@@ -13,19 +13,19 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__social">
-        <CallIcon /> +88 01521 429588
+        <CallIcon /> 
       </div>
       <div className="footer__social">
-        <EmailIcon /> tahmidkhandokar82@gmail.com
+        <EmailIcon /> 
       </div>
       <div className="footer__social">
-        <FacebookIcon /> tahmidkhandokar82
+        <FacebookIcon /> 
       </div>
       <div className="footer__social">
-        <GitHubIcon /> tahmid86664
+        <GitHubIcon /> 
       </div>
       <div className="footer__social">
-        <LinkedInIcon /> tahmid-khandokar
+        <LinkedInIcon /> 
       </div> 
     </div>
   )

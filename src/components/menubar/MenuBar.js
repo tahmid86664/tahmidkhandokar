@@ -14,13 +14,19 @@ const MenuBar = ({ menuOpen, setMenuOpen }) => {
           <a href="#intro">Home</a>
         </li>
         <li onClick={handleOpenMenu}>
-          <a href="#portfolio">Projects</a>
+          <a href="#portfolio">Portfolio</a>
         </li>
-        <li onClick={handleOpenMenu}>
+        {/* <li onClick={handleOpenMenu}>
           <a href="#works">Works</a>
-        </li>
+        </li> */}
         <li onClick={handleOpenMenu}>
           <a href="#testimonials">Testimonials</a>
+        </li>
+        <li onClick={handleOpenMenu}>
+          <a href="#blogs">Blogs</a>
+        </li>
+        <li onClick={handleOpenMenu}>
+          <a href="#about">About Me</a>
         </li>
         <li onClick={handleOpenMenu}>
           <a href="#contact">Contact</a>

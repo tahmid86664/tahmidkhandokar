@@ -35,6 +35,24 @@ export const featuredPortfolio = [
       img:
         "https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900",
     },
+    {
+      id: 7,
+      title: "Banking App",
+      img:
+        "https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900",
+    },
+    {
+      id: 8,
+      title: "Banking App",
+      img:
+        "https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900",
+    },
+    {
+      id: 9,
+      title: "Banking App",
+      img:
+        "https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900",
+    },
   ];
   
   export const webPortfolio = [
