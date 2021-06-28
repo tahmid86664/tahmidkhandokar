@@ -5,13 +5,19 @@ import './Testimonials.scss';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
 
+
+const getWidth = () => window.innerWidth 
+  || document.documentElement.clientWidth 
+  || document.body.clientWidth;
+
 const Testimonials = () => {
-  // const [currentTestimonials, setCurrentTestimonials] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [pageCount, setPageCount] = useState(0);
-  const testimonialPerPage = getComputedStyle(document.documentElement).getPropertyValue('--width') < 949 ? 1 : 3; 
+  const [testimonialPerPage, setTestimonialPerPage] = useState(3);
   // if small size device then show one testimonial otherwise three 
-  const testimonialVisited = pageNumber * testimonialPerPage;
+  const testimonialVisited = pageNumber * testimonialPerPage;  
+
+  let [width, setWidth] = useState(getWidth());
 
   const testimonials = [
     {
@@ -58,9 +64,29 @@ const Testimonials = () => {
     },
   ];
 
+
+  useEffect(() => {
+    const resizeListener = () => {
+      setWidth(getWidth());
+    };
+    window.addEventListener('resize', resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener('resize', resizeListener);
+    }
+  }, []); 
+
+  useEffect(() => {
+    setTestimonialPerPage(
+      width < 949 ? 1 : 3
+    )
+  },  [width]);
+  
   useEffect(() => {
     setPageCount(Math.ceil(testimonials.length / testimonialPerPage))
-  }, [testimonials]);
+  }, [testimonials.length, testimonialPerPage]);
 
   const displayTestimonials = testimonials.slice(testimonialVisited, testimonialVisited + testimonialPerPage)
     .map(testimonial => {
