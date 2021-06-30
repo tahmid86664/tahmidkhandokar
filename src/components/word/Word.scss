@@ -1,0 +1,19 @@
+.word {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    top: 0;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      transform: scale(1.12);
+      font-weight: 600;
+    }
+  }  
+}

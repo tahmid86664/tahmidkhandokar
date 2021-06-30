@@ -6,7 +6,7 @@ import './App.scss';
 import Header from './components/header/Header';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
-import Blogs from './components/blogs/Blogs';
+// import Blogs from './components/blogs/Blogs';
 // import Works from './components/works/Works';
 import Testimonials from './components/testimonials/Testimonials';
 import About from './components/about/About';
@@ -26,7 +26,7 @@ function App() {
         {/* works will be the recent works after making some production build */}
         {/* <Works />  */}
         <Testimonials />
-        <Blogs />
+        {/* <Blogs /> */}
         <About />
         <Contact />
       </div>
