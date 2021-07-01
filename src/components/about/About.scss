@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .about {
   background-color: white;
   display: flex;
@@ -6,6 +8,10 @@
 
   h1 {
     font-size: 60px;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   .about__outerContainer {
@@ -14,6 +20,12 @@
     align-items: center;
     justify-content: space-around;
 
+    @include mobile {
+      margin-top: 5px;
+      flex-direction: column;
+      justify-content: unset;
+    }
+
     .about__aboutContainer {
       width: 40%;
       padding: 40px;
@@ -21,6 +33,11 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
+
+      @include mobile {
+        padding: 0;
+        width: 90%;
+      }
     }
 
     .about__skillContainer {
@@ -34,9 +51,33 @@
       justify-content: center;
       flex-wrap: wrap;
 
+      @include smallDevice {
+        padding: 10px 0;
+      }
+
+      @include mobile {
+        width: 100%;
+        flex-direction: row;
+        padding: 10px 0;
+      }
+
+      
+
       h3 {
         font-size: 35px;
         margin-bottom: 20px;
+
+        @include mobile {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .about__skillLanguages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
       }
     }
   }

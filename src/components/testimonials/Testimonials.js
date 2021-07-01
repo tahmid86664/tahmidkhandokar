@@ -14,7 +14,7 @@ const Testimonials = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   const [testimonialPerPage, setTestimonialPerPage] = useState(3);
-  // if small size device then show one testimonial otherwise three 
+
   const testimonialVisited = pageNumber * testimonialPerPage;  
 
   let [width, setWidth] = useState(getWidth());

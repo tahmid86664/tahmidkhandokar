@@ -12,6 +12,12 @@ $height: 660px;
   }
 }
 
+@mixin smallDevice {
+  @media (max-width: #{360}) {
+    @content
+  }
+}
+
 @mixin headerInfoDisplay {
   @media (max-width: #{$headerInfoDisplayWidth}) {
     @content

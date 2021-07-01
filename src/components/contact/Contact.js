@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className='contact' id="contact" >
       <div className="contact__container">
-        <h1>Talk with me</h1>
+        <h1>Talk with Me</h1>
         <div className="contact__separator"></div>
         <div className="contact__formContainer">
           <h2>Fill up the form</h2>

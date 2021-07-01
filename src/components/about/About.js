@@ -1,21 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './About.scss';
 
 import Word from '../word/Word';
 
+const getWidth = () => window.innerWidth 
+  || document.documentElement.clientWidth 
+  || document.body.clientWidth;
+
 const About = () => {
-  const about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non est leo. Maecenas et congue metus. " +
-    "Morbi id risus sit amet dolor convallis accumsan vitae imperdiet mauris. Vivamus aliquam est sit amet neque consequat interdum. " +
-    "Sed dictum, tortor id ultrices volutpat, quam nulla lacinia nulla, sed commodo mi augue a sapien. Maecenas ultrices nulla eget ullamcorper placerat. " +
-    "Phasellus ac mattis dui, id pharetra nisi. Morbi consectetur justo lacus, vel porttitor odio aliquam id. " +
-    "Nullam blandit, sem eget molestie vulputate, velit dolor tincidunt velit, id mattis orci libero faucibus massa. " +
-    "Praesent id commodo dolor. Sed quis pretium justo. Suspendisse posuere tincidunt purus, nec placerat arcu consectetur sed. " +
-    "Suspendisse eget sapien nec massa commodo fermentum eget a urna. Nulla facilisi. Sed suscipit fringilla rutrum. ";
+  let [width, setWidth] = useState(getWidth());
+  const [fontSize, setFontSize] = useState(18);
+  const [languageFontSize, setLanguageFontSize] = useState(18);
+  const [aboutTextHeight, setAboutTextHeight] = useState(22);
+  const [skillTextHeight, setSkillTextHeight] = useState(35);
+
+  const about = "Hey, there! I'm Khandokar Md. Mustafa Tahmid from Bangladesh. I'm a fullstack software developer. " +
+    "I had started the journey of programming when I was in 11th class. I learn some coding with C language. " +
+    "But I stucked for some reason. After a long time, I had started again. Then I realised, I was enjoying programming. " +
+    "After that, I had decided to take programming as my profession. " +
+    "I had got admitted into a University taking Computer Science as my subject and continuing. " +
+    "I enjoy the terms programming and developing. I've spent so many times to build some projects in various platform. " +
+    "Also I've spent some time to develop some mini games with Unity." +
+    "I love programming, writing, traveling, biking, playing games. ";
 
   const knowledges = ["C  ", "C++  ", "C#  ", "Java", "Python", "HTML", "CSS", 
     "JavaScript", "PHP", "ReactJS", "NodeJS", "ExpressJS", "Django", "Spring", 
     "Laravel", "Sass", "Bootstrap", "ASP.NET", "MongoDB", "SQL", "MySQL", "Firebase", "Supabase"];
+
+  useEffect(() => {
+    const resizeListener = () => {
+      setWidth(getWidth());
+    };
+    window.addEventListener('resize', resizeListener);
+  
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    }
+  }, []); 
+
+  useEffect(() => {
+    if (width < 768 ) {
+      setFontSize(14);
+      setLanguageFontSize(14);
+      setAboutTextHeight(18);
+      setSkillTextHeight(18);
+    } else {
+      setFontSize(18);
+      setLanguageFontSize(22);
+      setAboutTextHeight(22);
+      setSkillTextHeight(35);
+    }
+  }, [width]);
 
   return (
     <div className="about" id="about">
@@ -25,7 +61,7 @@ const About = () => {
         <div className="about__aboutContainer">
           {
             about.split(" ").map(a => (
-              <Word word={a} fontSize={18} height={22} />
+              <Word word={a} fontSize={fontSize} height={aboutTextHeight} />
             ))
           }
         </div>
@@ -37,7 +73,7 @@ const About = () => {
           <div className="about__skillLanguages">
             {
               knowledges.map(knowledge => (
-                <Word word={knowledge} fontSize={22} height={35}/>
+                <Word word={knowledge} fontSize={languageFontSize} height={skillTextHeight}/>
               ))
             }
           </div>
