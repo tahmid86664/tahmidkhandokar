@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.scss';
 
@@ -12,12 +12,16 @@ import Testimonials from './components/testimonials/Testimonials';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import MenuBar from './components/menubar/MenuBar';
+import Project from './pages/project/Project';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
+    <Router>
     <div className="app">
+      <Switch>
+        <Route exact path="/" >
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <MenuBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="sections">
@@ -30,7 +34,13 @@ function App() {
         <About />
         <Contact />
       </div>
+      </Route>
+      <Route path="/projects/:id">
+        <Project menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      </Route>
+      </Switch>
     </div>
+    </Router>
   );
 }
 

@@ -63,6 +63,19 @@
           transition: all 1.5s ease;
         }
       }
+
+      a {
+        .MuiSvgIcon-root {
+          font-size: 32px;
+          margin-right: 50px;
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: rgb(6, 170, 211);
+          }
+        }
+      }
+      
     }
   }
 

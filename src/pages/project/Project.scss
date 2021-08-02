@@ -1,0 +1,168 @@
+@import "../../global.scss";
+
+.project {
+
+  .header {
+    position: sticky;
+  }
+
+  .project__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .project__top {
+      display: flex;
+      width: 100%;
+      height: 700px;
+
+      .project__topLeft {
+        flex: 7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .project__img {
+          width: 90%;
+          height: 100%;
+        }
+
+        .project__imgSlideButton {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background-color: lightgray;
+          opacity: 0.6;
+          transition: all 0.4s ease-out;
+          cursor: pointer;
+
+          &.left {
+            position: absolute;
+            left: 70px;
+          }
+
+          &.right {
+            position: absolute;
+            right: 70px;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+          .MuiSvgIcon-root {
+            font-size: 45px;
+            color: #505050;
+          }
+        }
+
+        .project__imgSliderDots {
+          width: 90%;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: gray;
+          opacity: 0.5;
+          position: absolute;
+          bottom: 0px;
+
+          .project__imgSliderDot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: white;
+            margin-right: 10px;   
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $maincolor;
+            }
+          }
+        }
+        
+      }
+
+      .project__topRight {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .project__title {
+          font-size: 60px;
+        }
+
+        .project__showcaseLinks {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 50px;
+          
+          .project__showcaseLink {
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            margin-bottom: 15px;
+            background-color: $maincolor;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            a {
+              text-decoration: none;
+              font-size: 20px;
+              font-weight: 400;
+              color: white;
+            }
+
+            .MuiSvgIcon-root {
+              font-size: 35px;
+              color: #ffffff;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .project__bottom {
+      display: flex;
+      margin: 20px 0;
+      justify-content: space-between;
+
+      .project__bottomLeft {
+        flex: 6.5;
+        margin-left: 60px;
+        padding: 10px 20px;
+        border: 1.5px solid gray;
+
+        h3 {
+          font-size: 40px;
+          font-weight: 700;
+        }
+      }
+
+      .project__bottomRight {
+        flex: 3.5;
+        margin-left: 30px;
+
+        h3 {
+          font-size: 45px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
