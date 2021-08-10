@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/footer';
 import './Project.scss';
 import { ChevronRight, ChevronLeft, Code, Language, Videocam, DesktopWindows, PhoneAndroid, PhoneIphone } from '@material-ui/icons';
-import { reactProjects } from '../../mockData';
+import { useParams } from 'react-router-dom';
+import { reactProjects, javascriptProjects, nodeProjects, mernProjects, javaProjects, cProjects, csharpProjects, aspProjects, gameProjects, featuredProjects} from '../../mockData';
 
-const Project = ({ menuOpen, setMenuOpen, project }) => {
+const Project = ({ menuOpen, setMenuOpen }) => {
+  const [project, setProject] = useState({});
+  const { id, basis } = useParams();
 
   const handlePlatformIcon = (platform) => {
     switch (platform) {
@@ -22,6 +25,43 @@ const Project = ({ menuOpen, setMenuOpen, project }) => {
     }
   }
 
+  useEffect(() => {
+    switch (basis) {
+      case "react":
+        setProject(reactProjects[id-1]);
+        break;
+      case "javascript":
+        setProject(javascriptProjects[id-1]);
+        break;
+      case "node":
+        setProject(nodeProjects[id-1]);
+        break;
+      case "mern":
+        setProject(mernProjects[id-1]);
+        break;
+      case "java":
+        setProject(javaProjects[id-1]);
+        break;
+      case "c": 
+        setProject(cProjects[id-1]);
+        break;
+      case "csharp":
+        setProject(csharpProjects[id-1]);
+        break;
+      case "asp":
+        setProject(aspProjects[id-1]);
+        break;
+      case "game": 
+        setProject(gameProjects[id-1]);
+        break;
+      default:
+        setProject(featuredProjects[id-1]);
+        break;
+    }
+  }, [id, basis]);
+  console.log(basis);
+  console.log(project);
+
   return (
     <div className="project">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} project />
@@ -32,7 +72,7 @@ const Project = ({ menuOpen, setMenuOpen, project }) => {
                 <img src={imgUrl} alt="project img" className="project__img" />
               )
             } */}
-            <img src={reactProjects[0].images[0]} alt="project img" className="project__img" />
+            <img src={project.images[0]} alt="project img" className="project__img" />
             <span className="project__imgSlideButton left">
               <ChevronLeft />
             </span>
@@ -46,19 +86,19 @@ const Project = ({ menuOpen, setMenuOpen, project }) => {
             </div>
           </div>
           <div className="project__topRight">
-            <h3 className="project__title">{reactProjects[0].title}</h3>
+            <h3 className="project__title">{project.title}</h3>
             <div className="project__showcaseLinks">
               <div className="project__showcaseLink">
                 <Language />
-                <a href={reactProjects[0].liveUrl}>See in live</a>
+                <a href={project.liveUrl}>See in live</a>
               </div>
               <div className="project__showcaseLink">
                 <Code />
-                <a href={reactProjects[0].sourceCodeUrl}>Source Code</a>                
+                <a href={project.sourceCodeUrl}>Source Code</a>                
               </div>
               <div className="project__showcaseLink">
                 <Videocam />
-                <a href={reactProjects[0].videoUrl}>See video on youtube</a>         
+                <a href={project.videoUrl}>See video on youtube</a>         
               </div>
             </div>
           </div>
@@ -68,25 +108,25 @@ const Project = ({ menuOpen, setMenuOpen, project }) => {
             <div className="project__descContainer">
             <h3>Project Details</h3>
             <div className="project__desc">
-              {reactProjects[0].description}
+              {project.description}
               <div className="project__platformContainer">
                 <h4>Platform</h4>
                 <div className="project__platform">
-                  {handlePlatformIcon(reactProjects[0].platform)}
-                  <span>{reactProjects[0].platform}</span>
+                  {handlePlatformIcon(project.platform)}
+                  <span>{project.platform}</span>
                 </div>
               </div>
               <div className="project__langContainer">
                 <h4>Language</h4>
                 <div className="project__lang">
                   <img src="/assets/code-file.png" alt="" />
-                  <span>{reactProjects[0].language}</span>
+                  <span>{project.language}</span>
                 </div>
               </div>
               <h4>Dependencies</h4>
               <ul className="project__dependencies">
-                {reactProjects[0].dependecies.length < 1 ? (<span>There is no dependency</span>):(
-                  reactProjects[0].dependecies.map(dependency => 
+                {project.dependecies.length < 1 ? (<span>There is no dependency</span>):(
+                  project.dependecies.map(dependency => 
                     <li className="project__dependency">
                       <img src="/assets/hand-right-d.png" alt="hand icon" />
                       {dependency}

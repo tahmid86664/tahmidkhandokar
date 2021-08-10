@@ -35,7 +35,7 @@ function App() {
         <Contact />
       </div>
       </Route>
-      <Route path="/projects/:id">
+      <Route path="/projects/:basis/:id">
         <Project menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       </Route>
       </Switch>

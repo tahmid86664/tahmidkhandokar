@@ -10,6 +10,7 @@ import { reactProjects, featuredProjects, javascriptProjects, nodeProjects,
 
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@material-ui/icons/KeyboardArrowLeft';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
@@ -114,12 +115,15 @@ const Portfolio = () => {
     }
   }, [selected]);
 
+  // make it component later
   const displayProject = data.slice(pageVisited, pageVisited + projectPerPage).map( d => {
     return (
-      <div className="portfolio__item">
-        <img src={d.coverImg} alt={selected} />
-        <h3>{d.title}</h3>
-      </div>
+      <Link to={`/projects/${d.basis}/${d.id}`} style={{textDecoration: "none"}}>
+        <div className="portfolio__item">
+          <img src={d.coverImg} alt={selected} />
+          <h3>{d.title}</h3>
+        </div>
+      </Link>
     );
   });
 
