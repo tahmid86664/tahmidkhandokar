@@ -114,6 +114,7 @@ const Portfolio = () => {
         break;
     }
   }, [selected]);
+  console.log(data);
 
   // make it component later
   const displayProject = data.slice(pageVisited, pageVisited + projectPerPage).map( d => {
