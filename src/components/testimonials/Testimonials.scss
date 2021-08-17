@@ -31,7 +31,7 @@
       align-items: center;
       justify-content: center;
       width: 20%;
-      height: 55%;
+      height: 450px;
       padding: 20px 0;
       margin-left: 100px;
       background-color: white;
@@ -42,7 +42,8 @@
       }
 
       h2 {
-        margin-bottom: 20px;
+        font-size: 24px;
+        margin-bottom: 15px;
       }
 
       .testimonials__formInput, .testimonials__formInputArea {

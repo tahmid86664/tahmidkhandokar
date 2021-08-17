@@ -15,12 +15,16 @@ const Header = ({ menuOpen, setMenuOpen, project }) => {
           <a href="/" className="header__logo">Dev.Tahmid</a>
           <div className="header__contactInfo">
             <div className="header__contactInfoIcon">
-              <PersonIcon />
-              <span>+88 01521 429588</span>
+              <a href="tel:+8801521429588">
+                <PersonIcon />
+                <span>+88 01521 429588</span>
+              </a>
             </div>
             <div className="header__contactInfoIcon">
-              <MailIcon />
-              <span>tahmidkhandokar82@gmail.com</span>
+              <a href="mailto:tahmidkhandokar82@gmail.com?subject=Talk with Tahmid" target="_blank" rel="noreferrer">
+                <MailIcon />
+                <span>tahmidkhandokar82@gmail.com</span>
+              </a>
             </div>
           </div>
         </div>

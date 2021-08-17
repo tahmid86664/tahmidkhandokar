@@ -33,6 +33,23 @@
         display: flex;
         justify-content: center;
 
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: $maincolor;
+
+          &:hover {
+            text-decoration: underline;
+            color: $maincolor;
+          }
+
+          &:focus {
+            color: $maincolor;
+          }
+        }
+
         @include headerInfoDisplay {
           display: none;
         }

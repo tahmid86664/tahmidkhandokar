@@ -79,9 +79,13 @@ const Testimonials = () => {
   }, []); 
 
   useEffect(() => {
-    setTestimonialPerPage(
-      width < 949 ? 1 : 3
-    )
+    if (width < 949) {
+      setTestimonialPerPage(1);
+    } else if (width >= 949 && width < 1420) {
+      setTestimonialPerPage(2);
+    } else {
+      setTestimonialPerPage(3);
+    }
   },  [width]);
   
   useEffect(() => {

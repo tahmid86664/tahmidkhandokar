@@ -61,6 +61,10 @@ const Project = ({ menuOpen, setMenuOpen }) => {
     }
   }, [id, basis]);
 
+  useEffect(() => {
+    setImageIndex(0);
+  }, [id, basis]);
+
   const handlePlatformIcon = (platform) => {
     switch (platform) {
       case "Web":
@@ -112,7 +116,7 @@ const Project = ({ menuOpen, setMenuOpen }) => {
                 <div className="project__imgSliderDots">
                   {
                     project.images.map((img, index) => 
-                      <div className={`project__imgSliderDot`} onClick={() => dotHandler(index)}></div>
+                      <div className={imageIndex === index ? "active project__imgSliderDot" : "project__imgSliderDot"} onClick={() => dotHandler(index)}></div>
                     )
                   }
                 </div>
