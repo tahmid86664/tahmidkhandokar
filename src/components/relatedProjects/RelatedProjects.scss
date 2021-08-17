@@ -1,0 +1,42 @@
+@import "../../global.scss";
+
+.relatedProjectContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  .relatedProject {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 15px;
+    border: 1px solid lightgray;
+    position: relative;
+    border-radius: 20px;
+    transition: all 1.2s ease-out;
+    cursor: pointer;
+
+    h3 {
+      position: absolute;
+      font-size: 20px;
+      color: white;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: $maincolor;
+      img {
+        opacity: 0.25;
+        z-index: 0;
+      }
+    }
+  }
+}

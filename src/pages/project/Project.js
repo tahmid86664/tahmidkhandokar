@@ -5,45 +5,58 @@ import './Project.scss';
 import { ChevronRight, ChevronLeft, Code, Language, Videocam, DesktopWindows, PhoneAndroid, PhoneIphone } from '@material-ui/icons';
 import { useParams } from 'react-router-dom';
 import { reactProjects, javascriptProjects, nodeProjects, mernProjects, javaProjects, cProjects, csharpProjects, aspProjects, gameProjects, featuredProjects} from '../../mockData';
+import RelatedProjects from '../../components/relatedProjects/RelatedProjects';
+
 
 const Project = ({ menuOpen, setMenuOpen }) => {
   const [project, setProject] = useState();
+  const [relatedProjects, setRelatedProjects] = useState([]);
   let { id, basis } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
-  const [imageClass, setImageClass] = useState("project__img");
+  const [imageClass] = useState("project__img");
 
   useEffect(() => {
     switch (basis) {
       case "react":
         setProject(reactProjects[id-1]);
         console.log("from useeffect react");
+        setRelatedProjects(reactProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "javascript":
         setProject(javascriptProjects[id-1]);
+        setRelatedProjects(javascriptProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "node":
         setProject(nodeProjects[id-1]);
+        setRelatedProjects(nodeProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "mern":
         setProject(mernProjects[id-1]);
+        setRelatedProjects(mernProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "java":
         setProject(javaProjects[id-1]);
+        setRelatedProjects(javaProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "c": 
         setProject(cProjects[id-1]);
+        setRelatedProjects(cProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "csharp":
         setProject(csharpProjects[id-1]);
+        setRelatedProjects(csharpProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "asp":
         setProject(aspProjects[id-1]);
+        setRelatedProjects(aspProjects.filter(p => p.id !== parseInt(id)))
         break;
       case "game": 
         setProject(gameProjects[id-1]);
+        setRelatedProjects(gameProjects.filter(p => p.id !== parseInt(id)))
         break;
       default:
         setProject(featuredProjects[id-1]);
+        setRelatedProjects(featuredProjects.filter(p => p.id !== parseInt(id)))
         break;
     }
   }, [id, basis]);
@@ -77,6 +90,10 @@ const Project = ({ menuOpen, setMenuOpen }) => {
     setImageIndex(project.images.length-1)
   }
 
+  const dotHandler = (index) => {
+    setImageIndex(index)
+  }
+
   return (
     <div className="project">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} project />
@@ -93,9 +110,11 @@ const Project = ({ menuOpen, setMenuOpen }) => {
                   <ChevronRight />
                 </span>
                 <div className="project__imgSliderDots">
-                  <div className="project__imgSliderDot"></div>
-                  <div className="project__imgSliderDot"></div>
-                  <div className="project__imgSliderDot"></div>
+                  {
+                    project.images.map((img, index) => 
+                      <div className={`project__imgSliderDot`} onClick={() => dotHandler(index)}></div>
+                    )
+                  }
                 </div>
               </div>
               <div className="project__topRight">
@@ -158,36 +177,7 @@ const Project = ({ menuOpen, setMenuOpen }) => {
               </div>
               <div className="project__bottomRight">
                 <h3>Related Projects</h3>
-                <div className="relatedProjectContainer">
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                  <div className="relatedProject">
-                    <img src="/assets/projects/monsters-rolodex/2.png" alt="cover img" />
-                    <h3>Fire Chat with React and ChatEngine IO</h3>
-                  </div>
-                </div>
+                <RelatedProjects relatedProjects={relatedProjects} />
               </div>
             </div>
           </div>
