@@ -94,124 +94,19 @@ export const javascriptProjects = [
   },
 ];
 
-export const nodeProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "node",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const nodeProjects = [];
 
-export const mernProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "mern",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const mernProjects = [];
 
-export const javaProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Java",
-    basis: "java",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const javaProjects = [];
 
-export const cProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "c",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const cProjects = [];
 
-export const csharpProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "csharp",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const csharpProjects = [];
 
-export const aspProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "asp",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const aspProjects = [];
 
-export const gameProjects = [
-  {
-    id: 1,
-    title: "Monsters Rolodex with ReactJS",
-    description: "It's my first React project having class based components. It's a simple project containing some monsters cards having nice transition effect and a functional search bar. You can search or filter monsters from the search bar.",
-    language: "Javascript",
-    basis: "game",
-    dependecies: [],
-    platform: "Web",
-    images: ["/assets/projects/monsters-rolodex/1.png", "/assets/projects/monsters-rolodex/2.png", "/assets/projects/monsters-rolodex/3.png"],
-    coverImg: "/assets/projects/monsters-rolodex/1.png",
-    videoUrl: "",
-    liveUrl: "https://tahmid86664.github.io/monsters-rolodex/",
-    sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
-  },
-];
+export const gameProjects = [];
 
 export const featuredProjects = [
   {
@@ -229,7 +124,7 @@ export const featuredProjects = [
     sourceCodeUrl: "https://github.com/tahmid86664/monsters-rolodex-code",
   },
   {
-    id: 2,
+    id: 1,
     title: "Tic Tac Toe using HTML, CSS and Javascript",
     description: "This game is made of basic HTMl, CSS and Javascript. Applied some simple logics for gameplay in Javascript. Click to See in live button and play the game, have fun.",
     language: "Javascript",
@@ -243,7 +138,7 @@ export const featuredProjects = [
     sourceCodeUrl: "https://github.com/tahmid86664/tic-tac-toe-vanillajs",
   },
   {
-    id: 3,
+    id: 5,
     title: "Friendlyyy, a Social App using ReactJS and SASS",
     description: "It's a social media app using React with dynamic data which are not from database. These are mock data. You can login with different users, here 10 users are available for testing. You can like and dislike posts. You can see birthday of someone which dynamic and realtime. Also users have profile page which also dynamic using mock data. Online friends bar also dynamic. For styling I've used SASS. It's clean and simple. You can also visit the register and login page which are designed but not functional. Links: https://friendlyyy-react.netlify.app/login, https://friendlyyy-react.netlify.app/register. This app is fully funtional in MERN stack build, go to MERN Stack tab and see with full functionality.",
     language: "Javascript",

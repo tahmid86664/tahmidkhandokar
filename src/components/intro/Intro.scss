@@ -25,15 +25,14 @@
       @include mobile {
         align-items: flex-start;
       }
-      
+
       img {
         height: 100%;
-      
+
         @include mobile {
           height: 55%;
         }
       }
-      
     }
   }
 
@@ -57,11 +56,12 @@
       }
 
       h1 {
-        font-size: 50px;
+        font-size: 36px;
         margin: 10px 0;
 
         @include mobile {
-          font-size: 30px;
+          font-size: 26px;
+          text-align: center;
         }
       }
       h2 {
